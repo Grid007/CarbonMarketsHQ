@@ -1,7 +1,8 @@
-```markdown
+
+
 # Project Dashboard
 
-This project provides a simple dashboard to visualize data from a REST API using Streamlit and SQLAlchemy. The project fetches data from an API, stores it in an SQLite database, and displays key metrics and visualizations in a Streamlit application.
+This project provides a simple dashboard to visualize data from a REST API using Streamlit and SQLAlchemy. It fetches data from an API, stores it in an SQLite database, and displays key metrics and visualizations in a Streamlit application.
 
 ## Project Structure
 
@@ -94,48 +95,44 @@ project_dashboard/
 
 ## Viewing the SQLite Database
 
-To view and interact with the `projects.db` SQLite database, you have several options but I prefer this:
+To view and interact with the `projects.db` SQLite database, you can use the SQLite Command Line Interface:
 
- **Using SQLite Command Line Interface**
+1. Open Terminal (or Command Prompt on Windows).
+2. Navigate to your project directory:
 
-   - Open Terminal (or Command Prompt on Windows)
-   - Navigate to your project directory:
+   ```bash
+   cd path/to/your/project_dashboard
+   ```
 
-     ```bash
-     cd path/to/your/project_dashboard
-     ```
+3. Open the SQLite CLI:
 
-   - Open the SQLite CLI:
+   ```bash
+   sqlite3 projects.db
+   ```
 
-     ```bash
-     sqlite3 projects.db
-     ```
+4. View the tables in the database:
 
-   - View the tables in the database:
+   ```sql
+   .tables
+   ```
 
-     ```sql
-     .tables
-     ```
+5. View the schema of the `projects` table:
 
-   - View the schema of the `projects` table:
+   ```sql
+   .schema projects
+   ```
 
-     ```sql
-     .schema projects
-     ```
+6. Query the `projects` table:
 
-   - Query the `projects` table:
+   ```sql
+   SELECT * FROM projects LIMIT 10;
+   ```
 
-     ```sql
-     SELECT * FROM projects LIMIT 10;
-     ```
+7. Exit the SQLite CLI:
 
-   - Exit the SQLite CLI:
-
-     ```sql
-     .exit
-     ```
-
-
+   ```sql
+   .exit
+   ```
 
 ## Usage
 
